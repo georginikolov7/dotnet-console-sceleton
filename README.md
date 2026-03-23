@@ -17,6 +17,8 @@ Sample app prividing a 3-layer sceleton for .net console apps
 Sceleton uses docker compose to spin up the postgre db in a container
 There is also a docker compose config for the app itself, so it can be built into a container
 
+--- 
+
 ### App Startup:
    1. Ensure you have .env file with all necessary configs
    2. In the root directory run:
@@ -30,4 +32,10 @@ There is also a docker compose config for the app itself, so it can be built int
       ```
        This spins up the app container in an interactive shell so the app can directly be used
        --rm unsures the container is deleted after running the app
-
+ ---
+      
+### Cleanup:
+   To remove the db container and clear the allocated volume run:
+   ```
+   docker compose down -v db
+   ```
