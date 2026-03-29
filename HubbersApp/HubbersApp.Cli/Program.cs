@@ -10,7 +10,7 @@ using HubbersApp.Infrastructure.Repos;
 
 
 var builder = Host.CreateApplicationBuilder(args);
-// Ensure the builder looks at the physical file in the execution directory
+// Ensure the builder looks at the physical file in the execution directory 
 builder.Configuration.SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddEnvironmentVariables(); // Essential for Docker!
